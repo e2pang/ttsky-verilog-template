@@ -41,4 +41,5 @@ TOPLEVEL = tb
 MODULE = test
 
 # include cocotb's make rules to take care of the simulator setup
+SIM_ARGS += +vcd
 include $(shell cocotb-config --makefiles)/Makefile.sim
