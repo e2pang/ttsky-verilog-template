@@ -8,7 +8,7 @@ module tb ();
 
   // Dump the signals to a VCD file. You can view it with gtkwave or surfer.
   initial begin
-    $dumpfile("/home/ejlpang/ttsky-verilog-template/test/sim_build/rtl/tb.vcd");
+    $dumpfile("tb.vcd");
     $dumpvars(0, tb);
     #1;
   end
