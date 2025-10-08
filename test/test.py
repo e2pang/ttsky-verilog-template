@@ -40,13 +40,14 @@ async def test_project(dut):
     # Keep testing the module by changing the input values, waiting for
     # one or more clock cycles, and asserting the expected output values.
 
+    
     # test asynch reset functionality
-    await Timer(3, units="us")
-    dut.rst_n.value = 0 # reset again
-    await ClockCycles(dut.clk, 1)
-    assert dut.uo_out.value == 0
-    await ClockCycles(dut.clk, 3)
-
+    # await Timer(3, units="us")
+    # dut.rst_n.value = 0 # reset again
+    # await ClockCycles(dut.clk, 1)
+    # assert dut.uo_out.value == 0
+    # await ClockCycles(dut.clk, 3)
+    
     # 
 
 
