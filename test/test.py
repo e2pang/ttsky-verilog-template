@@ -59,7 +59,7 @@ async def test_project(dut):
     dut.uio_in.value = 7   # set arbitrary value
     await ClockCycles(dut.clk, 1)
     dut.ui_in.value = 0 # indicate end of synch load
-    await ClockCycles(dut.clk, 1)
+    await ClockCycles(dut.clk, 2)
     assert int(dut.uo_out.value) == 8
 
 
