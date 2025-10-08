@@ -30,7 +30,7 @@ module tt_um_counter (
       temp <= temp + 1;         // if no load and no reset, then count upwards by 1
   end
 
-  assign uo_out = ena ? temp : 8'bz; // uses the value of ena to decide whether to output counter value or go high-z
+  assign uo_out = temp; // uses the value of ena to decide whether to output counter value or go high-z
 
   // All output pins must be assigned. If not used, assign to 0.
   assign uio_out = 0;
