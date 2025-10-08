@@ -55,10 +55,10 @@ async def test_project(dut):
 
     # test synchronous load
     await ClockCycles(dut.clk, 1)
-    dut.ui_in[0].value = 1 # indicate start of synch load
+    dut.ui_in.value = 1 # indicate start of synch load
     dut.uio_in.value = 7   # set arbitrary value
     await ClockCycles(dut.clk, 1)
-    dut.ui_in[0].value = 0 # indicate end of synch load
+    dut.ui_in.value = 0 # indicate end of synch load
     await ClockCycles(dut.clk, 1)
     assert int(dut.uo_out.value) == 8
 
