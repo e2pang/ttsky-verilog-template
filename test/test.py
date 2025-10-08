@@ -16,11 +16,13 @@ async def test_project(dut):
 
     # Reset
     dut._log.info("Reset")
+    # Reset (active low)
+    dut.rst_n.value = 0   # assert reset
     dut.ena.value = 1
     dut.ui_in.value = 0
     dut.uio_in.value = 0
-    dut.rst_n.value = 1
     await ClockCycles(dut.clk, 10)
+    dut.rst_n.value = 1   # release reset
 
     dut._log.info("Test project behavior")
 
