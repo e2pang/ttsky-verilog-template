@@ -44,7 +44,7 @@ async def test_project(dut):
     await Timer(3, units="us")
     dut.rst_n.value = 0 # reset again
     assert dut.uo_out.value == 0
-    await ClockCycles(dut.clk, 1)
+    await ClockCycles(dut.clk, 3)
 
     # 
 
